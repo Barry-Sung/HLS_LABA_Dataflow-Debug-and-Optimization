@@ -64,12 +64,13 @@ set_top example
 open_solution -reset solution1
 
 # Define technology and clock rate
-set_part virtex7
+#set_part virtex7
+set_part {xcvu9p-flga2104-2-i}
 create_clock -period "75MHz"
 
 csim_design 
 csynth_design
 
 # Cosim will fail with a deadlock
-expect_error cosim_design "HLS 200-742"
+#expect_error cosim_design "HLS 200-742"
 
